@@ -1,0 +1,79 @@
+
+body{
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+
+}
+.card{
+    background-image:url("img1.png");
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 700px;
+    margin: 70px auto;
+    border-radius: 10px;
+}
+header{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+}
+.card2{
+    width: 85%;
+    border-radius: 20px;
+    height:500px;
+    margin: 10px auto;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(252, 249, 249, 0.6));
+}
+form{
+    padding: 50px 160px;
+}
+
+.input{
+    width: 400px;
+    border: 3px solid rgb(0, 0, 0);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 8px 10px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    box-shadow: 10px 10px 10px rgb(41, 40, 40);
+}
+section{
+    text-align: center;
+}
+button{
+    background: transparent;
+    padding: 5px 10px;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+}
+button:hover{
+    transform: scale(1.5);
+}
+section div{
+    font-size: 35px;
+    font-weight: 900;
+    text-shadow: 5px 5px 5px rgb(99, 95, 95);
+}
+.wind{
+    line-height: 10px;
+    text-shadow: 5px 5px 5px rgb(99, 95, 95);
+}
+.humidity{
+    line-height: 10px;
+}
+.city{
+    text-shadow: 5px 5px 5px black;
+}
+.temp{
+    padding-bottom: 20px;
+}
