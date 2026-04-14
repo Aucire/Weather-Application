@@ -5,19 +5,24 @@ const search=document.querySelector(".input")
 const button=document.querySelector(".button")
 
 async function weatherCheck(city){
-    const res=await fetch(base_url+ city + `&appid=${apiKey}`)
-    console.log(res);
-    const data=await res.json()
-    console.log(data);
-
-    document.querySelector('.city').innerHTML = data.name
-    document.querySelector('.temp').innerHTML = Math.round(data.main.temp-273) + '°C'
-    document.querySelector('.humid').innerHTML = data.main.humidity + " " + '%'
-    document.querySelector('.speed').innerHTML = data.wind.speed + " " + "Km/hr"
+    try{
+        const res=await fetch(base_url+ city + `&appid=${apiKey}`)
+        console.log(res);
+        const data=await res.json()
+        console.log(data);
     
+        document.querySelector('.city').innerHTML = data.name
+        document.querySelector('.temp').innerHTML = Math.round(data.main.temp-273) + '°C'
+        document.querySelector('.humid').innerHTML = data.main.humidity + " " + '%'
+        document.querySelector('.speed').innerHTML = data.wind.speed + " " + "Km/hr"
+    }catch (err) {
+        document.querySelector('.error').innerHTML = "The city entered doesnt exist....!reload & try again";
+        console.error(err);
+    }
 }
 
 button.addEventListener('click',(event)=>{
     event.preventDefault()
     weatherCheck(search.value)
+    search.value=""
 })
